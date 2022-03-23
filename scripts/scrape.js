@@ -1,16 +1,13 @@
 'use strict';
 
-const {scraper} = require('../lib/scraper');
+const {officeScraper} = require('../lib/scraper');
+let offices = []
 
-let officesURL = ['https://www.iit.edu/directory?title=&organization_type=All&title_1=&page=0', 'https://www.iit.edu/directory?title=&organization_type=All&title_1=&page=1'
-   ,'https://www.iit.edu/directory?title=&organization_type=All&title_1=&page=2', 'https://www.iit.edu/directory?title=&organization_type=All&title_1=&page=4'
-   ,'https://www.iit.edu/directory?title=&organization_type=All&title_1=&page=5','https://www.iit.edu/directory?title=&organization_type=All&title_1=&page=6'
-   ,'https://www.iit.edu/directory?title=&organization_type=All&title_1=&page=7', 'https://www.iit.edu/directory?title=&organization_type=All&title_1=&page=8'
-   , 'https://www.iit.edu/directory?title=&organization_type=All&title_1=&page=11', 'https://www.iit.edu/directory?title=&organization_type=All&title_1=&page=12'];
+let URL = 'https://www.iit.edu/directory?title=&organization_type=All&title_1=&page='
 
-// This prints out all of the offices and their locations. 
-// It prints it out sperately for each page. Later we will have to add to the more urls and fetch code to get the descriptions as well.
-for(let i = 0; i < officesURL.length; i++){
-   let offices = scraper(officesURL[i]);
-   console.log(offices);
+for(let i = 0; i < 13; i++){
+   let officesURL = URL + i;
+   offices.push(officeScraper(officesURL))
 }
+
+console.log(offices);
