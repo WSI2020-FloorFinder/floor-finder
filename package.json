@@ -5,7 +5,7 @@
   "scripts": {
 
     "start:dev": "nodemon ./bin/www",
-    "fetch": "node --experimental-fetch --no-warnings scripts/scrape"
+    "fetch": "node --experimental-fetch --no-warnings scripts/scrape",
     "start": "node ./bin/www"
 
     "start": "node ./bin/www",
