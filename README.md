@@ -10,3 +10,4 @@
 * Step 1: update to the newest version of node.js
 * Step 2 npm install
 * Step 3: npm run fetch
+
