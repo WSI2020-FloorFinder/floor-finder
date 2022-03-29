@@ -3,14 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-
     "start:dev": "nodemon ./bin/www",
     "fetch": "node --experimental-fetch --no-warnings scripts/scrape",
     "start": "node ./bin/www"
-
-    "start": "node ./bin/www",
-    "fetch": "node --experimental-fetch --no-warnings scripts/scrape"
-
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
