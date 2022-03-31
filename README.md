@@ -42,3 +42,9 @@ install mysql using Homebrew: `brew install mysql` then follow the instructions 
 ## How to run linting
 
 `npm run lint`
+
+## API Example
+
+### Search office
+
+- Search with keyword `Academic`: `http://localhost:3000/api/search?keyword=Academic&start=0&size=10`
