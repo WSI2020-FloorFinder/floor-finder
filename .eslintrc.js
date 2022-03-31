@@ -12,6 +12,8 @@ module.exports = {
   rules: {
     'no-console': 'off',
     camelcase: 'off',
+    'prefer-arrow-callback': 'off',
+    'func-names': ['error', 'never'],
     'no-await-in-loop': 'off',
     'no-plusplus': 'off',
     'comma-dangle': [
