@@ -1,6 +1,6 @@
 # Release Notes for IIT Floor Finder
 
-## Floor Finder 0.0.0
+## Floor Finder 1.0.0-alpha
 
 March 31st, 2022
 
