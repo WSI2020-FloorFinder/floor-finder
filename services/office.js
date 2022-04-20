@@ -16,7 +16,10 @@ async function findOffices(start = 0, size = 10, keyword = '') {
     limit: size,
   });
 
-  return result;
+  return {
+    count: result.count,
+    offices: result.rows.map((office) => office.toJSON()),
+  };
 }
 
 module.exports = {
