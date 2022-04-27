@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Floor Fourteen
+    body 
+        include #mixins 
+        section 
+            h1 Floor Fourteen Offices
+        main 
+            ul 
+                +name('Center for Stochastic Dynamics')
+                +location('14th Floor')
+
+            ul 
+                +name('Center for Study of Ethics in the Professions')
+                +phone('(312) 567 - 3017')
+                +location('14th Floor')
+            ul
+                +name('College of Computing')
+                +phone('(312) 567 - 3800')
+                +location('14th Floor')

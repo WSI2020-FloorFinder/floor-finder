@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Floor Two
+    body 
+        include #mixins 
+        section 
+            h1 Floor Two Offices 
+        main 
+            ul 
+                +name('Financial Aid')
+                +phone('(312) 567 - 7219')
+                +email('finaid@iit.edu')
+                +location('Suite 2C4-2')
+
+            ul  
+                +name('Office of the Registrar')
+                +phone('(312) 567 - 3100')
+                +fax('(312) 567 - 3313')
+                +email('registrar@iit.edu')
+                +location('Suite 2C4-2')
+
+            ul 
+                +name('Office of Title IX Compliance and HEA Compliance')
+                +phone('(312) 567 - 5725')
+                +location('Room 2D7-1')
+
+            ul 
+                +name('Student Accounting')
+                +phone('(312) 567 - 3794')
+                +email('sa@iit.edu')
+                +location('Suite 2C4-2')
+
+            ul 
+                +name('Undergraduate Academic Affairs')
+                +phone('(312) 567 - 3300')
+                +fax('(312) 567 - 3302')
+                +email('ugaa@iit.edu')
+                +location('Suite 2C8-1')

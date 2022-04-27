@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Floor Seven 
+    body 
+        include #mixins 
+        section 
+            h1 Floor Seven Offices 
+        main 
+            ul 
+                +name('Graduate Academic Affairs')
+                +phone('(312) 567 - 3024')
+                +fax('(312) 567 - 7140')
+                +email('gradcoll@iit.edu')
+                +location('Suite 7D7-1')
+            
+            ul 
+                +name('Office of Research Integrity and Compliance')
+                +phone('(312) 567 - 7141')
+                +fax('(312) 567 - 6980')
+                +email('oric@iit.edu')
+                +location('7D7-1')
+
+            ul 
+                +name('Office of Sponsored Research and Programs')
+                +phone('(312) 567 - 3035')
+                +email('osrp@iit.edu')
+                +location('7D7-1')
