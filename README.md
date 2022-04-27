@@ -5,11 +5,6 @@
 - Step 1: install [node.js](https://nodejs.org/en/download/)
 - Step 2: `npm install`
 
-## How to start the Express server
-
-- Step 1: `npm start`
-- Step 2: Open web browser and enter http://localhost:3000 to check the server status
-
 ## How to install MySQL
 
 ### For macOS
@@ -34,6 +29,12 @@ install mysql using Homebrew: `brew install mysql` then follow the instructions 
 - Step 1: set up db password environment variable: `export DB_PASSWORD=your_password_here`
 - Step 2: set up tables: `npm run mysql:setup`
 - Step 3: populate the data using the web scraper
+
+## How to start the Express server
+
+- Step 1: set up db password environment variable: `export DB_PASSWORD=your_password_here`
+- Step 2: `npm start`
+- Step 3: Open web browser and enter http://localhost:3000 to check the server status
 
 ## How to run the web scraper
 
