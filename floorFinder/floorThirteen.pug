@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Floor Thirteen 
+    body 
+        include #mixins 
+        section    
+            h1 Floor Thirteen Offices 
+        main 
+            ul 
+                +name('Human Resources')
+                +phone('(312) 567 - 3318')
+                +fax('(312) 567 - 3450')
+                +email('hr@iit.edu')
+                +location('13th Floor')
+            
+            ul 
+                +name('Office of Marketing and Communications')
+                +phone('(312) 567 - 3104')
+                +location('Suite 13D8-2')
+
+            ul 
+                +name('Procurement Services')
+                +phone('(312) 567 - 3211')
+                +location('13th Floor')
+
+            ul 
+                +name('Research Administration Services')
+                +phone('(312) 567 - 7013')
+                +location('13th Floor')
+
+            ul 
+                +name('Student Employment Office')
+                +phone('(312) 567 - 5729')
+                +fax('(312) 567 - 5700')
+                +email('seo1@iit.edu')
+                +location('13F-3')

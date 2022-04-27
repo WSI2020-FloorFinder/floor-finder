@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Floor One
+    body 
+        include #mixins
+        section
+            h1 Floor One Offices 
+        main 
+            ul
+                +name('Lewis College of Science and Letters')
+                +phone('(312) 567 - 3956')
+                +email('lewis@iit.edu')
+                +location('1st Floor')
+            
+            ul 
+                +name('Office of the General Counsel')
+                +phone('(312) 567 - 3006')
+                +fax('(312) 567 - 6931')
+                +location('Suite 1900-SW')
+             
+            ul 
+                +name('Office of the President')
+                +location('Suite 1900')
+
+            ul 
+                +name('Office of the Provost')
+                +phone('(312) 567 - 3163')
+                +fax('(312) 567 - 3110')
+                +location('Suite 1900')
