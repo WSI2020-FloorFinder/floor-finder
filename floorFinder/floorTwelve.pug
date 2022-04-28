@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Floor Twelve
+    body 
+        include #mixins
+        section 
+            h1 Floor Twelve Offices 
+        main 
+            ul  
+                +name('Center for Leadership Studies')
+                +phone('(312) 567 - 7972')
+                +email('leadership.academy@iit.edu')
+                +location('12th Floor')
+            
+            ul 
+                +name('Center for Research and Service')
+                +phone('(312) 567 - 6471')
+                +email('center@iit.edu')
+                +location('Suite 1200')

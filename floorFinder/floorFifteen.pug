@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Floor Fifteen
+    body 
+        include #mixins
+        section
+            h1 Floor Fifteen Offices 
+        
+        main 
+            ul
+                +name('Air Force ROTC (AFROTC)')
+                +phone('(312) 567 - 3525')
+                +fax('(312) 567 - 5902')
+                +email('afrotc@iit.edu')
+                +location('15th Floor')
+            
+            ul 
+                +name('Army ROTC')
+                +phone('(312) 808 - 7140')
+                +fax('(312) 808 - 7142')
+                +email('armyrotc@iit.edu')
+                +location('15th Floor')
+            
+            ul 
+                +name('Navy ROTC (NROTC)')
+                +phone('(312) 567 - 3530')
+                +fax('(312) 567 - 3528')
+                +email('nrotc@iit.edu')
+                +location('15th Floor')
+
+
+            
