@@ -7,6 +7,7 @@
 
 ## How to start the Express server
 
+- set up db password environment variable: `export DB_PASSWORD=your_password_here`
 - Step 1: `npm start`
 - Step 2: Open web browser and enter http://localhost:3000 to check the server status
 

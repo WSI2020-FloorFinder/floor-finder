@@ -15,8 +15,8 @@ router.get('/search', async (req, res) => {
   const result = await findOffices(start, size, req.query.keyword);
 
   res.send({
-    offices: [...result.rows],
-    total: result.count,
+    offices: result.offices,
+    count: result.count,
     start,
     size,
   });
