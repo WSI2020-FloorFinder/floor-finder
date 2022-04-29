@@ -10,24 +10,27 @@ Office.init(
       autoIncrement: true,
       primaryKey: true,
     },
-    officeName: {
+    name: {
       type: DataTypes.STRING(100),
     },
     description: {
       type: DataTypes.TEXT,
     },
+    building: {
+      type: DataTypes.STRING(100),
+    },
     location: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    zipCode: {
-      type: DataTypes.STRING(10),
+    url: {
+      type: DataTypes.STRING(200),
     },
-    openHours: {
+    email: {
       type: DataTypes.STRING(100),
     },
-    imagePath: {
-      type: DataTypes.STRING(100),
+    phone: {
+      type: DataTypes.STRING(50),
     },
   },
   {

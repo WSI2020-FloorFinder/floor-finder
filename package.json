@@ -6,8 +6,10 @@
     "start:dev": "nodemon ./bin/www",
     "mysql:setup": "node db/mysql/setup.js",
     "fetch": "node --experimental-fetch --no-warnings scripts/scrape",
+    "scrape": "node --experimental-fetch --no-warnings scripts/scrapeV2",
     "start": "node ./bin/www",
-    "lint": "eslint . --ext .js --fix",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
     "test": "mocha"
   },
   "dependencies": {
