@@ -30,15 +30,18 @@ install mysql using Homebrew: `brew install mysql` then follow the instructions 
 - Step 2: set up tables: `npm run mysql:setup`
 - Step 3: populate the data using the web scraper
 
+## How to run the web scraper
+
+- Step 1: set up db password environment variable: `export DB_PASSWORD=your_password_here`
+- Step 2: `npm run scrape`
+
+
 ## How to start the Express server
 
 - Step 1: set up db password environment variable: `export DB_PASSWORD=your_password_here`
 - Step 2: `npm start`
 - Step 3: Open web browser and enter http://localhost:3000 to check the server status
 
-## How to run the web scraper
-
-`npm run fetch`
 
 ## How to run linting
 
