@@ -39,7 +39,7 @@ install mysql using Homebrew: `brew install mysql` then follow the instructions 
 ## How to start the Express server
 
 - Step 1: set up db password environment variable: `export DB_PASSWORD=your_password_here`
-- Step 2: `npm start`
+- Step 2: `npm start` or `npm run start:dev`
 - Step 3: Open web browser and enter http://localhost:3000 to check the server status
 
 
@@ -51,4 +51,5 @@ install mysql using Homebrew: `brew install mysql` then follow the instructions 
 
 ### Search office
 
-- Search with keyword `Academic`: `http://localhost:3000/api/search?keyword=Academic&start=0&size=10`
+- Example: search with keyword `student` on the name and description fields: `http://localhost:3000/api/search?size=10&keyword=student&fields=name,description`
+- Seachable fields: name, description, location, phone, and email (if `fields` is not passed, all seachable fields will be used).

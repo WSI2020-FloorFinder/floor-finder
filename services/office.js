@@ -1,14 +1,31 @@
 const { Op } = require('sequelize');
 const Office = require('../models/office');
 
-async function findOffices(start = 0, size = 10, keyword = '') {
+async function findOffices(start = 0, size = 100, keyword = '', fields = []) {
   const query = {};
+  const allowedFields = ['name', 'location', 'description', 'email', 'phone'];
   if (keyword) {
-    query.where = {
-      location: {
-        [Op.substring]: keyword,
-      },
-    };
+    let searchFields = allowedFields.filter((field) => fields.includes(field));
+    if (!searchFields.length) {
+      searchFields = allowedFields;
+    }
+
+    console.log(searchFields);
+    if (searchFields.length === 1) {
+      query.where = {
+        [searchFields[0]]: {
+          [Op.substring]: keyword,
+        },
+      };
+    } else {
+      query.where = {
+        [Op.or]: searchFields.map((field) => ({
+          [field]: {
+            [Op.substring]: keyword,
+          },
+        })),
+      };
+    }
   }
   const result = await Office.findAndCountAll({
     ...query,
