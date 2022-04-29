@@ -1,5 +1,7 @@
 'use strict';
 
-module.exports = test_offices => {
+const { officeScraper } = require("../lib/scraper");
 
+module.exports = test_offices => {
+    officeScraper
 };

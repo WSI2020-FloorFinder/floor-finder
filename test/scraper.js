@@ -1,14 +1,13 @@
 /* global describe, it */
 
+const request = require('supertest');
 const assert = require('assert');
 const { expect } = require('chai');
-// const test_offices = require('../lib/test.js');
-const test_offices = require('./test');
+const app = require('../app');
+const { officeScraper } = require('../lib/scraper');
+const { officeLocationScraper } = require('../lib/scraper');
+const { description } = require('../lib/scraper');
 
-const foo = 'bar';
-const beverages = { tea: ['chai', 'matcha', 'oolong'] };
-
-const blankx = [];
 
 describe('The scraper library', function () {
   it('should not mess with truth', function () {
@@ -16,40 +15,32 @@ describe('The scraper library', function () {
   });
 });
 
-describe('Data', function () {
-  it('types should be', function () {
-    expect(foo).to.be.a('string');
-    expect(foo).to.equal('bar');
-    expect(foo).to.have.lengthOf(3);
-    expect(beverages).to.have.property('tea').with.lengthOf(3);
-  });
-});
-
-describe('Blank', function () {
-  it('should be empty', function () {
-    expect(blankx).to.be.an('array');
-  });
-});
-
 describe('OfficeScraper', function () {
   it('should be a function', function () {
-    expect(test_offices).to.be.a('function');
+    expect(officeScraper).to.be.a('function');
   });
 });
 
-describe('Math', function () {
-  it('should test if 2 + 2 = 4', function () {
-    assert.equal(4, 2 + 2);
-  });
-  it('should test if 2 + 2 = 5', function () {
-    assert.equal(4, 2 + 2);
+describe('OfficeLocationScraper', function () {
+  it('should be a function', function () {
+    expect(officeLocationScraper).to.be.a('function');
   });
 });
 
-/* describe('Offices', function () {
-  it('should be an array', function () {
-    expect(offices).to.be.an('array');
+describe('Description', function () {
+  it('should be a function', function () {
+    expect(description).to.be.a('function');
   });
-}); */
+});
 
-// expect([1, 2, 3]).to.be.an('array');
+describe('The GET / route', function() {
+  it('should return a 200 status code', function(done) {
+    request(app).get('/').expect(200, done);
+  });
+});
+
+describe('The GET /none route', function () {
+  it('should return a 404 status code', function (done) {
+    request(app).get('/none').expect(404, done);
+  });
+});
