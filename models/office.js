@@ -16,6 +16,9 @@ Office.init(
     description: {
       type: DataTypes.TEXT,
     },
+    building: {
+      type: DataTypes.STRING(100),
+    },
     location: {
       type: DataTypes.STRING,
       allowNull: false,

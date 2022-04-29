@@ -3,7 +3,14 @@ const Office = require('../models/office');
 
 async function findOffices(start = 0, size = 100, keyword = '', fields = []) {
   const query = {};
-  const allowedFields = ['name', 'location', 'description', 'email', 'phone'];
+  const allowedFields = [
+    'name',
+    'location',
+    'building',
+    'description',
+    'email',
+    'phone',
+  ];
   if (keyword) {
     let searchFields = allowedFields.filter((field) => fields.includes(field));
     if (!searchFields.length) {
