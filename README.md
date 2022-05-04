@@ -51,5 +51,12 @@ install mysql using Homebrew: `brew install mysql` then follow the instructions 
 
 ### Search office
 
-- Example: search with keyword `student` on the name and description fields: `http://localhost:3000/api/search?size=10&keyword=student&fields=name,description`
+## Example 1 - keyword search
+
+- Search with keyword `student` on the name and description fields: `http://localhost:3000/api/search?size=10&keyword=student&fields=name,description`
 - Seachable fields: name, description, building, location, phone, and email (if `fields` is not passed, all seachable fields will be used).
+
+## Example 2 - filter by building
+
+- Filter by building `Michael Paul Galvin Tower`: http://localhost:3000/api/search?building=Michael%20Paul%20Galvin%20Tower&size=100
+

@@ -5,6 +5,7 @@ const router = express.Router();
 
 /* GET or search offices. */
 router.get('/search', async (req, res) => {
+  console.log(`building ${req.query.building}`);
   console.log(`u searched ${req.query.keyword}`);
   console.log(`fields ${req.query.fields}`);
   console.log(`start from ${req.query.start}`);
@@ -16,6 +17,7 @@ router.get('/search', async (req, res) => {
   const result = await findOffices(
     start,
     size,
+    req.query.building,
     req.query.keyword,
     (req.query.fields || '').split(',')
   );
