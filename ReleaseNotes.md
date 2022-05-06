@@ -1,5 +1,25 @@
 # Release Notes for IIT Floor Finder
 
+## Floor Finder 3.0.0-public
+
+May 4th, 2022
+
+What's New
+
+- Updates to tests, release notes, dependencies
+
+- Uploading html files
+
+- Adding missing stylesheet link
+
+- add building filter for API and tweak scapper logic for finding building
+
+- add campus navigator and google map integration
+
+- Adding description
+
+- add links between pages
+
 ## Floor Finder 2.0.0-beta
 
 April 28th, 2022
