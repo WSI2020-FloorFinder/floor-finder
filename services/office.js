@@ -1,7 +1,13 @@
 const { Op } = require('sequelize');
 const Office = require('../models/office');
 
-async function findOffices(start = 0, size = 100, keyword = '', fields = []) {
+async function findOffices(
+  start = 0,
+  size = 100,
+  building = '',
+  keyword = '',
+  fields = []
+) {
   const query = {};
   const allowedFields = [
     'name',
@@ -11,6 +17,7 @@ async function findOffices(start = 0, size = 100, keyword = '', fields = []) {
     'email',
     'phone',
   ];
+
   if (keyword) {
     let searchFields = allowedFields.filter((field) => fields.includes(field));
     if (!searchFields.length) {
@@ -34,6 +41,28 @@ async function findOffices(start = 0, size = 100, keyword = '', fields = []) {
       };
     }
   }
+
+  if (building) {
+    if (query.where) {
+      query.where = {
+        [Op.and]: [
+          {
+            building: {
+              [Op.eq]: building,
+            },
+          },
+          query.where,
+        ],
+      };
+    } else {
+      query.where = {
+        building: {
+          [Op.eq]: building,
+        },
+      };
+    }
+  }
+
   const result = await Office.findAndCountAll({
     ...query,
     offset: start,

@@ -39,8 +39,9 @@ install mysql using Homebrew: `brew install mysql` then follow the instructions 
 ## How to start the Express server
 
 - Step 1: set up db password environment variable: `export DB_PASSWORD=your_password_here`
-- Step 2: `npm start` or `npm run start:dev`
-- Step 3: Open web browser and enter http://localhost:3000 to check the server status
+- Step 2: set up [Google Map API key](https://developers.google.com/maps/documentation/javascript/get-api-key) environment variable: `export API_KEY=your_key_here` (optional step for developing the Campus Navigator page)
+- Step 3: `npm start` or `npm run start:dev`
+- Step 4: Open web browser and enter http://localhost:3000 to check the server status
 
 
 ## How to run linting
@@ -51,5 +52,12 @@ install mysql using Homebrew: `brew install mysql` then follow the instructions 
 
 ### Search office
 
-- Example: search with keyword `student` on the name and description fields: `http://localhost:3000/api/search?size=10&keyword=student&fields=name,description`
+## Example 1 - keyword search
+
+- Search with keyword `student` on the name and description fields: `http://localhost:3000/api/search?size=10&keyword=student&fields=name,description`
 - Seachable fields: name, description, building, location, phone, and email (if `fields` is not passed, all seachable fields will be used).
+
+## Example 2 - filter by building
+
+- Filter by building `Michael Paul Galvin Tower`: http://localhost:3000/api/search?building=Michael%20Paul%20Galvin%20Tower&size=100
+
