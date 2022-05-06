@@ -35,6 +35,12 @@ router.get('/floorNine', async (req, res) => {
   res.render('../floorFinder/floorNine');
 });
 
+router.get('/iit-tower', async (req, res) => {
+  const result = await findOffices(0, 100, 'Michael Paul Galvin Tower');
+  console.log(result);
+  res.render('index', { title: 'IIT Tower', result });
+});
+
 /* GET navigation page. */
 router.get('/navigation', async (req, res) => {
   const result = await findOffices(0, 100);
