@@ -35,6 +35,30 @@ router.get('/floorNine', async (req, res) => {
   res.render('../floorFinder/floorNine');
 });
 
+router.get('/floorTwelve', async (req, res) => {
+  res.render('../floorFinder/floorTwelve');
+});
+
+router.get('/floorThirteen', async (req, res) => {
+  res.render('../floorFinder/floorThirteen');
+});
+
+router.get('/floorFourteen', async (req, res) => {
+  res.render('../floorFinder/floorFourteen');
+});
+
+router.get('/floorFifteen', async (req, res) => {
+  res.render('../floorFinder/floorFifteen');
+});
+
+router.get('/floorSixteen', async (req, res) => {
+  res.render('../floorFinder/floorSixteen');
+});
+
+router.get('/floorEighteen', async (req, res) => {
+  res.render('../floorFinder/floorEighteen');
+});
+
 router.get('/iit-tower', async (req, res) => {
   const result = await findOffices(0, 100, 'Michael Paul Galvin Tower');
   console.log(result);
