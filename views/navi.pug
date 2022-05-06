@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form.navigation
+    label From
+      select(name='dropDownFrom', id='origin')
+        each office in result.offices
+          option(value=office.location) #{office.name}
+    label To
+      select(name='dropDownTo', id='destination')
+        each office in result.offices
+          option(value=office.location) #{office.name}
+    label
+      select(name='mode', id='mode')
+        option(value='WALKING') Walking
+        option(value='BICYCLING') Bicycling
+        option(value='DRIVING') Driveing
+
+
+    button#go Take me there!
+
+  div#map
+
+
+  a(class='home-button' href='/') Floor-Finder
+
+  script(src='/javascript/navigation.js')
+  script(src=`https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap` async defer)
